@@ -1,4 +1,3 @@
-```tsx
 "use client";
 
 export default function Home() {
@@ -102,4 +101,3 @@ export default function Home() {
     </div>
   );
 }
-```
