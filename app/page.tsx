@@ -1,56 +1,105 @@
-import Image from 'next/image';
-import Link from 'next/link';
+```tsx
+"use client";
 
 export default function Home() {
-  const primaryColor = '#0066FF'; // Pixel Canvas Primary
-  const accentColor = '#22c55e'; // Pixel Canvas Accent
+  return (
+    <div className="min-h-screen bg-gray-900 text-gray-100 font-sans antialiased">
+      {/* Hero Section */}
+      <section className="bg-gray-900 text-center py-20 px-4">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-blue-600 mb-4">Pixel Canvas</h1>
+        <p className="text-xl md:text-2xl mb-8">Immersive 3D Experiences for Enterprise Brands</p>
+        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-gray-300">
+          Deliver custom branded Unreal Engine 5 experiences directly in the browser, captivating your audience with cutting-edge realism.
+        </p>
+        <a href="#contact" className="bg-blue-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out shadow-lg">
+          Get Started
+        </a>
+      </section>
 
-  const features = [
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-4m0 0l4-4m-4 4L10 4m0 16L6 12m4 4l-4-4m0 0l-4-4"></path>
-        </svg>
-      ),
-      title: 'Custom Branded Experiences',
-      description: 'Tailored 3D environments that perfectly reflect your brand identity and messaging.',
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-1-3m-6.938-9h13.856c1.54 0 2.502 1.667 1.732 3L13.732 17c-.77 1.333-2.694 1.333-3.464 0L3.34 9c-.77-1.333.192-3 1.732-3z"></path>
-        </svg>
-      ),
-      title: 'Browser & Device Agnostic',
-      description: 'Reach your audience anywhere, anytime, on any device without downloads or installations.',
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.002 2.002M16 16l2.002 2.002M12 18h.01M6 6h.01"></path>
-        </svg>
-      ),
-      title: 'Unreal Engine 5 Power',
-      description: 'Experience unparalleled visual fidelity and interactive capabilities with the latest in real-time 3D technology.',
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-        </svg>
-      ),
-      title: 'Virtual Events & Conferences',
-      description: 'Host engaging virtual events, product launches, and conferences in stunning 3D environments.',
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
-        </svg>
-      ),
-      title: 'Digital Twin Capabilities',
-      description: 'Create precise digital replicas of real-world assets, products, or environments for simulation and interaction.',
-    },
-    {
-      icon: (
-        <svg className="w-8 h
+      {/* Features Section */}
+      <section className="py-20 px-4 bg-gray-800">
+        <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">Why Choose Pixel Canvas?</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="text-center p-6 bg-gray-900 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+            <p className="text-5xl mb-4">🚀</p>
+            <h3 className="text-2xl font-semibold mb-2 text-blue-600">Browser-Based</h3>
+            <p className="text-gray-300">No downloads, instant access for all your users.</p>
+          </div>
+          <div className="text-center p-6 bg-gray-900 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+            <p className="text-5xl mb-4">🎨</p>
+            <h3 className="text-2xl font-semibold mb-2 text-blue-600">Custom Branding</h3>
+            <p className="text-gray-300">Seamlessly integrate your brand identity and assets.</p>
+          </div>
+          <div className="text-center p-6 bg-gray-900 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+            <p className="text-5xl mb-4">⚡️</p>
+            <h3 className="text-2xl font-semibold mb-2 text-blue-600">Unreal Engine 5</h3>
+            <p className="text-gray-300">Leverage cutting-edge realism and performance.</p>
+          </div>
+          <div className="text-center p-6 bg-gray-900 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 ease-in-out">
+            <p className="text-5xl mb-4">📊</p>
+            <h3 className="text-2xl font-semibold mb-2 text-blue-600">Analytics & ROI</h3>
+            <p className="text-gray-300">Track engagement and measure the impact of your experience.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 px-4 bg-gray-900">
+        <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">How It Works</h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="text-center p-6 bg-gray-800 rounded-lg shadow-xl">
+            <div className="text-6xl font-extrabold text-green-500 mb-4">1</div>
+            <h3 className="text-2xl font-semibold mb-2 text-blue-600">Define Vision</h3>
+            <p className="text-gray-300">Collaborate with our experts to outline your goals and brand vision.</p>
+          </div>
+          <div className="text-center p-6 bg-gray-800 rounded-lg shadow-xl">
+            <div className="text-6xl font-extrabold text-green-500 mb-4">2</div>
+            <h3 className="text-2xl font-semibold mb-2 text-blue-600">Design & Build</h3>
+            <p className="text-gray-300">Our team crafts your custom 3D immersive world with precision.</p>
+          </div>
+          <div className="text-center p-6 bg-gray-800 rounded-lg shadow-xl">
+            <div className="text-6xl font-extrabold text-green-500 mb-4">3</div>
+            <h3 className="text-2xl font-semibold mb-2 text-blue-600">Deploy & Engage</h3>
+            <p className="text-gray-300">Launch your experience directly in-browser, captivating your audience.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 bg-gray-800">
+        <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">What Our Clients Say</h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="p-6 bg-gray-900 rounded-lg shadow-xl">
+            <p className="italic mb-4 text-gray-300">"Pixel Canvas transformed our virtual events with stunning realism and flawless execution. Truly exceptional!"</p>
+            <p className="font-semibold text-blue-600">- Alex R., CEO, Global Corp</p>
+          </div>
+          <div className="p-6 bg-gray-900 rounded-lg shadow-xl">
+            <p className="italic mb-4 text-gray-300">"Unreal Engine 5 delivered in a browser is an absolute game-changer. Our customers were absolutely amazed."</p>
+            <p className="font-semibold text-blue-600">- Sarah L., Marketing Director, Innovate Ltd.</p>
+          </div>
+          <div className="p-6 bg-gray-900 rounded-lg shadow-xl">
+            <p className="italic mb-4 text-gray-300">"Seamless integration, incredible support, and a final product that exceeded all expectations. Highly recommend!"</p>
+            <p className="font-semibold text-blue-600">- Mike T., Brand Manager, Future Brands</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="bg-blue-600 text-white text-center py-20 px-4">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Elevate Your Brand?</h2>
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          Let's create an unforgettable 3D immersive experience that sets your enterprise brand apart.
+        </p>
+        <a href="#" className="bg-green-500 hover:bg-white hover:text-blue-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out shadow-lg">
+          Contact Us Today
+        </a>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-gray-900 text-gray-500 text-center py-8 px-4 border-t border-gray-700">
+        <p>&copy; 2023 Pixel Canvas. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
+```
